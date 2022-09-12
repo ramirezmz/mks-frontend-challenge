@@ -1,23 +1,37 @@
 import React from 'react'
 import {CardContainer, Picture, ProducName, ProductInfo, PriceContent, Description, ShoppingBagIcon, AddButton} from './styled'
+import Item from '../../services/interface'
+import { useSelector, useDispatch } from 'react-redux'
+import { addProduct } from '../../features/Store'
 
-const Card = () => {
+const Card = ({description, name, photo, price}: Item) => {
+  const dispatch = useDispatch()
+
   return (
     <CardContainer>
-      <Picture src='https://mks-sistemas.nyc3.digitaloceanspaces.com/products/iphone12x64.webp' />
+      <Picture src={photo} />
       <ProductInfo>
         <ProducName>
-          Apple Watch Series 4 GPS
+          {name}
         </ProducName>
         <PriceContent>
-          R$2.399
+          R${price}
         </PriceContent>
       </ProductInfo>
       <Description>
-        Redesigned from scratch and completely revised.
+        {description}
       </Description>
       <br/>
-      <AddButton>
+      <AddButton
+          onClick={() => {
+            dispatch(addProduct({
+              name,
+              photo,
+              price,
+              description
+            }))
+          }}
+        >
         <ShoppingBagIcon />
         <h2>COMPRAR</h2>
       </AddButton>
