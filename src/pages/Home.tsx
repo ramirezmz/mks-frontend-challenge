@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Header from '../components/Header/Header'
 import api from '../services/api'
 
 const Home = () => {
@@ -8,11 +9,11 @@ const Home = () => {
       const result = await api.get(url)
       console.log(result.data)
     }
-    fetchData()
+    // fetchData()
   })
   return (
     <div>
-      home test
+      <Header />
     </div>
   )
 }
