@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Header from '../components/Header/Header'
 import Card from '../components/Card/Card'
+import Footer from '../components/Footer/Footer'
 import api from '../services/api'
 import {ContentItems} from './styled'
 
@@ -22,6 +23,7 @@ const Home = () => {
         <Card />
         <Card />
       </ContentItems>
+      <Footer />
     </div>
   )
 }
