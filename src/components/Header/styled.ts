@@ -26,6 +26,7 @@ export const BtnBuy = styled.button`
   background-color: #ffff;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 `
 
 export const StoreIcon = styled(LocalGroceryStore)`
