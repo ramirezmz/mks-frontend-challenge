@@ -6,4 +6,5 @@ export default interface Item {
   price?: string;
   createdAt?: string;
   updatedAt?: string;
+  length?: number
 }
