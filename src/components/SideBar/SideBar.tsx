@@ -1,5 +1,5 @@
 import React from 'react'
-import { Sidebar, CloseOutlineIcon, Content, ContentTitle, Title } from './styled'
+import { Sidebar, CloseOutlineIcon, Content, ContentTitle, Title, ContentResult, BtnBuy } from './styled'
 import MinCard from '../MinCard/MinCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { handleSidebar } from '../../features/Store'
@@ -37,6 +37,13 @@ const SideBar = () => {
           )
         })}
       </Content>
+      <ContentResult>
+        <p>Total:</p>
+        <span>R$1232</span>
+      </ContentResult>
+      <BtnBuy>
+        Finalizar Compra
+      </BtnBuy>
     </Sidebar>
   )
 }

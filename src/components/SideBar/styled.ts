@@ -10,8 +10,9 @@ export const Sidebar = styled.div`
   width: 35%;
   display: flex;
   flex-direction: column;
-  padding: 3rem;
   animation: showSidebar .4s;
+  overflow-y: scroll;
+  cursor: default;
 
   > svg {
     color: white;
@@ -32,13 +33,6 @@ export const Sidebar = styled.div`
   }
 `
 
-export const CloseContent = styled.div`
-  /* background-color: #000;
-  width: 30px;
-  border-radius: 50%;
-  border: none; */
-`
-
 export const CloseOutlineIcon = styled(CloseOutline)`
   color: #fff;
   width: 34px;
@@ -52,12 +46,15 @@ export const CloseOutlineIcon = styled(CloseOutline)`
 `
 export const Content = styled.div`
   color: #fff;
-  margin-top: 7rem;
+  margin-top: 2.3rem;
+  padding: 2rem;
+  
 `
 
 export const ContentTitle = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 2rem;
   
   h2 {
     color: #fff;
@@ -70,4 +67,28 @@ export const ContentTitle = styled.div`
 
 export const Title = styled.div`
   width: 140px;
+`
+
+export const ContentResult = styled.div`
+  display: flex;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+`
+
+export const BtnBuy = styled.div`
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  width: auto;
+  height: 90px;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  
 `
