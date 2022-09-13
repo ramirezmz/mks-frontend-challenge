@@ -8,5 +8,5 @@ export const FooterDiv = styled.footer`
   margin: auto;
   bottom: 0;
   padding: 0.4rem;
-  position: fixed;
+  position: relative;
 `
