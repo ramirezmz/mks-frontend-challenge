@@ -25,7 +25,6 @@ const Home = () => {
       <Header />
       <ContentItems>
         {isLoading && <p>Loading...</p>}
-
         {list.map((item: Item) => {
           return (
             <Card
