@@ -5,6 +5,8 @@ import Footer from '../components/Footer/Footer'
 import api from '../services/api'
 import {ContentItems} from './styled'
 import Item from '../services/interface'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const Home = () => {
    const [list, setList ] = useState([])
@@ -28,7 +30,6 @@ const Home = () => {
         {list.map((item: Item) => {
           return (
             <Card
-              id={item.id}
               name={item.name}
               description={item.description}
               photo={item.photo}
