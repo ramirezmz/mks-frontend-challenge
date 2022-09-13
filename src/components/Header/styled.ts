@@ -20,20 +20,23 @@ export const TitleIcon = styled.h1`
   font-size: 40px;
 `
 
-export const BtnBuy = styled.button`
+export const StoreContentButton = styled.div`
   width: 90px;
   height: 45px;
   background-color: #ffff;
   border-radius: 8px;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  color: #000;
 `
 
 export const StoreIcon = styled(LocalGroceryStore)`
-  color: #000;
   width: 19px;
   height: 18px;
-  margin-right: 8px;
+  margin-right: 1rem;
 `
 
 export const Span = styled.span`

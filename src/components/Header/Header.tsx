@@ -1,5 +1,5 @@
 import React from 'react'
-import { Head, IconContent, BtnBuy, StoreIcon, Span, SpanResult, TitleIcon } from './styled'
+import { Head, IconContent, StoreContentButton, StoreIcon, Span, SpanResult, TitleIcon } from './styled'
 import { useDispatch, useSelector } from 'react-redux'
 import SideBar from '../SideBar/SideBar'
 import { handleSidebar } from '../../features/Store'
@@ -28,13 +28,13 @@ const Header = () => {
         <TitleIcon>MKS</TitleIcon>
         <Span>Sistemas</Span>
       </IconContent>
-      <BtnBuy onClick={() => {dispatch(
-        handleSidebar(true)
-      )}}>
-        {sideBar && <SideBar/>}
-        <StoreIcon />
+      <StoreContentButton>
+        <StoreIcon onClick={() => {dispatch(
+          handleSidebar(true)
+          )}}/>
+          {sideBar && <SideBar/>}
         <SpanResult>{itemList.length}</SpanResult>
-      </BtnBuy>
+      </StoreContentButton>
     </Head>
   )
 }

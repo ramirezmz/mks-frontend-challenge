@@ -3,10 +3,17 @@ import { Sidebar, CloseOutlineIcon, Content, ContentTitle, Title } from './style
 import MinCard from '../MinCard/MinCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { handleSidebar } from '../../features/Store'
+import Item from '../../services/interface'
+
+interface StoreItems {
+  items: {
+    value: Item
+  }
+}
 
 const SideBar = () => {
   const dispatch = useDispatch()
-  const selectedItems = useSelector((state) => state.items.value)
+  const selectedItems = useSelector((state: StoreItems) => state.items.value)
   
   return (
     <Sidebar>
