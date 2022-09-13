@@ -1,5 +1,14 @@
 import React from 'react'
-import {CardContainer, Picture, ProducName, ProductInfo, PriceContent, Description, ShoppingBagIcon, AddButton} from './styled'
+import {
+  CardContainer, 
+  Picture,
+  ProducName, 
+  ProductInfo, 
+  PriceContent, 
+  Description, 
+  ShoppingBagIcon, 
+  AddButton
+} from './styled'
 import Item from '../../services/interface'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../features/Store'
