@@ -1,12 +1,11 @@
 import React from 'react'
 import {CardContainer, Picture, ProducName, ProductInfo, PriceContent, Description, ShoppingBagIcon, AddButton} from './styled'
 import Item from '../../services/interface'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addProduct } from '../../features/Store'
 
-const Card = ({description, name, photo, price}: Item) => {
+const Card = ({description, name, photo, price, id}: Item) => {
   const dispatch = useDispatch()
-
   return (
     <CardContainer>
       <Picture src={photo} />
@@ -28,7 +27,8 @@ const Card = ({description, name, photo, price}: Item) => {
               name,
               photo,
               price,
-              description
+              description,
+              id
             }))
           }}
         >
