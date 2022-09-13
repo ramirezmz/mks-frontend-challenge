@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline'
 
 export const Content = styled.div`
   background-color: #fff;
@@ -10,6 +11,7 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   padding: 1rem;
+  position: relative;
 `
 
 export const Picture = styled.img`
@@ -37,4 +39,15 @@ export const Price = styled.span`
   font-weight: 700;
   font-size: 17px;
   margin: 0.4rem;
+`
+
+export const CloseOutlineIcon = styled(CloseOutline)`
+  width: 1.5rem;
+  padding: 1px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
 `

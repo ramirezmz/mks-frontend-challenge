@@ -10,10 +10,12 @@ import {
   AddButton
 } from './styled'
 import Item from '../../services/interface'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addProduct } from '../../features/Store'
 
-const Card = ({description, name, photo, price, id}: Item) => {
+const Card = ({description, name, photo, price}: Item) => {
+
+  const list = useSelector((state) => state.items.value)
   const dispatch = useDispatch()
   return (
     <CardContainer>
@@ -33,11 +35,11 @@ const Card = ({description, name, photo, price, id}: Item) => {
       <AddButton
           onClick={() => {
             dispatch(addProduct({
+              id: list.length + 1,
               name,
               photo,
               price,
               description,
-              id
             }))
           }}
         >
